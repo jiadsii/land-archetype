@@ -17,6 +17,7 @@
         <java.version>8</java.version>
         <revision>0.0.1-SNAPSHOT</revision>
     </properties>
+
     <modules>
         <module>service</module>
         <module>api</module>
