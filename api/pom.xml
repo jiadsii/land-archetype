@@ -7,9 +7,10 @@
         <artifactId>pom</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
+	<groupId>com.land.template</groupId>
     <artifactId>api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>template.api</name>
+    <name>archetype.api</name>
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>8</java.version>

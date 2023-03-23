@@ -1,5 +1,6 @@
 DEBUG_PORT=$1
 MAVEN_RELOAD=$2
+mvn clean -T 1C install -f ../../pom.xml $MAVEN_RELOAD -Dmaven.test.skip=true
 mvn clean -T 1C package -f ../pom.xml $MAVEN_RELOAD -Dmaven.test.skip=true
 if [ -n $JREBEL_HOME ]; then
     export JAVA_OPTS="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=$DEBUG_PORT"
