@@ -6,10 +6,10 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan({ "com.land.template", "com.land.base" })
-public class DemoApplication {
+public class LandApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(LandApplication.class, args);
 	}
 
 }

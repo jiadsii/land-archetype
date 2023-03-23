@@ -21,7 +21,7 @@ public class DemoController {
     /**
      * 健康检查
      */
-    @RequestMapping("/healthCheck")
+    @RequestMapping("/demoController")
     public ResponseEntity<String> welcome() {
         log.info("==== [log]: {}");
         return ResponseEntity.ok("pong");
