@@ -1,5 +1,6 @@
 package com.land.template.controller;
 
+import org.slf4j.MDC;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,8 +24,8 @@ public class DemoController {
      */
     @RequestMapping("/demoController")
     public ResponseEntity<String> welcome() {
-        log.info("==== [log]: {}");
-        return ResponseEntity.ok("pong");
+        log.info("==== [log]: {}",MDC.get("requestID"));
+        return ResponseEntity.ok("just a demo controller changed");
     }
 
 }
