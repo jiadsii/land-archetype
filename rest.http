@@ -2,3 +2,6 @@ GET http://localhost:8080/healthCheck
 
 # test demo controller
 GET http://localhost:8080/demoController
+
+# test mybatis query
+POST http://localhost:8080/query

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.goldkinn.mapper.TGkDailyTaskMapper">
+    <select id="notFillUserList" resultType="com.goldkinn.model.dao.TGkDailyUser">
+      SELECT
+        user.*
+      FROM t_gk_daily_user user
+      LEFT JOIN t_gk_daily_task task
+      ON task.create_user = user.dd_union_id
+      <if test="typec == 1">
+        AND DATE_FORMAT(task.create_date,'%Y-%m-%d') = #{createDate}
+        AND task.typec = 1
+      </if>
+      <if test="typec == 2">
+        and week_number = #{weekNumber}
+        and task.typec = 2
+      </if>
+      WHERE task.id IS NULL
+    </select>
+</mapper>
