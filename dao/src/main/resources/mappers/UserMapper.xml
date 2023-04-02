@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.goldkinn.mapper.TGkDailyTaskMapper">
-    <select id="notFillUserList" resultType="com.goldkinn.model.dao.TGkDailyUser">
+<mapper namespace="com.land.template.mapper.TGkDailyTaskMapper">
+    <select id="notFillUserList" resultType="com.land.template.po.User">
       SELECT
         user.*
       FROM t_gk_daily_user user
