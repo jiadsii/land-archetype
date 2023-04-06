@@ -14,7 +14,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @MapperScan("com.land.template.mapper")
 @EnableCaching(proxyTargetClass = true)
 @EnableAspectJAutoProxy(proxyTargetClass = true)
-@ComponentScan({ "com.land.template", "com.land.base" })
+@ComponentScan({ "com.land.template.controller", "com.land.base" })
 public class LandApplication {
 
 	public static void main(String[] args) {

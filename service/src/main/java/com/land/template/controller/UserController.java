@@ -29,8 +29,8 @@ public class UserController {
      * query user
      */
     @RequestMapping("/query")
-    public ResponseEntity<List<User>> query() {
-        List<User> userList = userMapper.selectList(null);
+    public ResponseEntity<User> query() {
+        User userList = userMapper.notFillUserList();
         log.info("==== [log]: {}", JSON.toJSONString(userList, SerializerFeature.PrettyFormat));
         return ResponseEntity.ok(userList);
     }

@@ -1,7 +1,5 @@
 package com.land.template.mapper;
 
-import java.util.List;
-
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.land.template.po.User;
 
@@ -14,5 +12,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserMapper extends BaseMapper<User> {
 
-    public List<User> notFillUserList(int typec);
+    public User notFillUserList();
+
 }
