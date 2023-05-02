@@ -7,8 +7,8 @@
     xsi:schemaLocation = "http://www.zeroturnaround.com http://update.zeroturnaround.com/jrebel/rebel-2_2.xsd">
   <classpath>
     <dir name="${user.dir}/target/classes"></dir>
-    <dir name="${user.dir}/../dao/target/classes"></dir>
-    <dir name="${user.dir}/../biz/target/classes"></dir>
-    <dir name="${user.dir}/../api/target/classes"></dir>
+    <dir name="${user.dir}/../land-archetype-dao/target/classes"></dir>
+    <dir name="${user.dir}/../land-archetype-biz/target/classes"></dir>
+    <dir name="${user.dir}/../land-archetype-api/target/classes"></dir>
   </classpath>
 </application>

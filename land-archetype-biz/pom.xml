@@ -4,11 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
         <groupId>com.land.archetype</groupId>
-		<artifactId>pom</artifactId>
+        <artifactId>land-archetype</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>com.land.template</groupId>
-	<artifactId>biz</artifactId>
+	<artifactId>land-archetype-biz</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>template.biz</name>
 	<description>Demo project for Spring Boot</description>
@@ -17,8 +16,8 @@
 	</properties>
 	<dependencies>
 		<dependency>
-			<groupId>com.land.template</groupId>
-			<artifactId>dao</artifactId>
+			<groupId>com.land.archetype</groupId>
+			<artifactId>land-archetype-dao</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>

@@ -1,12 +1,10 @@
-DEBUG_PORT=$1
-MAVEN_RELOAD=$2
-mvnj8 clean -T 1C install -f ../../pom.xml $MAVEN_RELOAD -Dmaven.test.skip=true -U
-mvnj8 clean -T 1C install -f ../pom.xml $MAVEN_RELOAD -Dmaven.test.skip=true -U
-# if [ -n $JREBEL_HOME ]; then
-#     export JAVA_OPTS="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=$DEBUG_PORT"
-#     export JAVA_OPTS="$JAVA_OPTS -noverify -agentpath:$JREBEL_HOME/lib/libjrebel64.dylib"
-#     echo "SETTING JREBEL=$JREBEL_HOME/lib/libjrebel64.dylib"
-# fi
+#!/bin/bash
+set -e
+mvn clean -T 1C install -f ../pom.xml -Dmaven.test.skip=true -U
+if [ $JREBEL_HOME ]; then
+    export JAVA_OPTS="$JAVA_OPTS -noverify -agentpath:$JREBEL_HOME/lib/libjrebel64.dylib"
+    echo "SETTING JREBEL=$JREBEL_HOME/lib/libjrebel64.dylib"
+fi
 $JAVA_8_HOME/bin/java $JAVA_OPTS \
 -Xms1024m -Xmx1024m \
 -Dspring.application.name=land-archetype \
@@ -21,4 +19,4 @@ $JAVA_8_HOME/bin/java $JAVA_OPTS \
 -Dspring.cloud.nacos.config.username=nacos \
 -Dspring.cloud.nacos.config.password=bTzs0FN8WdDvspJvdO3g \
 -Dspring.config.import=nacos:land-archetype \
--jar ./target/service-0.0.1-SNAPSHOT.jar
+-jar ./target/land-archetype-service-0.0.1-SNAPSHOT.jar

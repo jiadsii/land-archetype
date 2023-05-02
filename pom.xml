@@ -7,7 +7,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <groupId>com.land.archetype</groupId>
-    <artifactId>pom</artifactId>
+    <artifactId>land-archetype</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>archetype.pom</name>
     <description>Demo project for Spring Boot</description>
@@ -17,9 +17,9 @@
         <revision>0.0.1-SNAPSHOT</revision>
     </properties>
     <modules>
-        <module>service</module>
-        <module>api</module>
-        <module>dao</module>
-        <module>biz</module>
+        <module>land-archetype-api</module>
+        <module>land-archetype-dao</module>
+        <module>land-archetype-biz</module>
+        <module>land-archetype-service</module>
     </modules>
 </project>
